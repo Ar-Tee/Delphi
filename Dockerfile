@@ -1,7 +1,7 @@
 FROM ubuntu:jammy
 # jammy is the code name of 22.04 LTS
 
-ARG password=<password>
+ARG password=<yourpassword>
 
 ENV PA_SERVER_PASSWORD=$password
 
