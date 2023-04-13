@@ -5,11 +5,14 @@ Build Dockerfile (watch the dot at the end !) where "delphidev" can be your own 
 
 sudo docker build --no-cache -t "delphidev:Dockerfile" .
 
-Run (debug mode): 
+Run (debug mode):
+
 docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -it -e PA_SERVER_PASSWORD=<password> -p 64211:64211 -p 8082:8082 delphidev:Dockerfile
 
 Run (no debug mode): 
-docker run -it -e PA_SERVER_PASSWORD=<password> -p 64211:64211 -p 8082:8082 delphidev:Dockerfile
+
+  docker run -it -e PA_SERVER_PASSWORD=<password> -p 64211:64211 -p 8082:8082 delphidev:Dockerfile
+
 
 ld-linux.exe: error: cannot find -lgcc_s
 
