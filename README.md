@@ -14,6 +14,8 @@ Run (no debug mode):
   docker run -it -e PA_SERVER_PASSWORD=<password> -p 64211:64211 -p 8082:8082 delphidev:Dockerfile
 
 
+Problems when setting up the Delphi-Linux-Docker environment:
+
 ld-linux.exe: error: cannot find -lgcc_s
 
 The problem is that the VM shares the host's Documents folder (like on the h: drive), which is something like " h: \ Home \ Documents \ ...".
@@ -23,3 +25,14 @@ The solution is to copy the Linux SDK to a folder inside the VM or c:\ drive, fo
 Then, change/overwrite the BDSPLATFORMSDKSDIR environment variable in Delphi "Options | IDE | Environment variables" to 
 this local folder where you copied the Linux SDK. Finally, go to (Options | Deployment | SDK Manager), select the Linux SDK and 
 press the "Update local file cache" button. Done. Recompile your project and it will work.
+
+
+paserver_docker.sh: no such file or directory.
+
+or
+
+/bin/sh: 1: ./paserver_docker.sh: not found.
+
+Convert the paserver_docker.sh file from Windows file to Unix file. (UNIX EOL issue)
+This functionality is built into Notepad++. 
+From the "Edit" menu, select "EOL Conversion" -> "UNIX/OSX Format".
