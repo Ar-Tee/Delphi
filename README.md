@@ -1,7 +1,7 @@
 Delphi Docker File
 For using Ubuntu 22.04 LTS (jammy) with PAServer and Indy http(s) components for Delphi 11.3 Alexandria.
 
-Build Dockerfile (watch the dot at the end !) where "delphidev" can be your own name: 
+Build Dockerfile (watch the dot at the end !) where "delphidev" can be your own name:
 sudo docker build --no-cache -t "delphidev:Dockerfile" .
 
 Run (debug mode): 
